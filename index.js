@@ -174,7 +174,8 @@ ffmpegUfvPlatform.prototype.accessories = function(callback) {
                         "maxStreams": 2,
                         "maxWidth": discoveredChannel.width, // or however we end up getting to this!
                         "maxHeight": discoveredChannel.height,
-                        "maxFPS": discoveredChannel.fps
+                        "maxFPS": discoveredChannel.fps,
+                        "vaapiDevice": nvrConfig.vaapiDevice
                       };
 
                       debug('Config: ' + JSON.stringify(videoConfig));
@@ -191,7 +192,7 @@ ffmpegUfvPlatform.prototype.accessories = function(callback) {
 
                       debug(JSON.stringify(cameraConfig));
 
-                      var cameraSource = new UFV(hap, cameraConfig);
+                      var cameraSource = new UFV(self.log, hap, cameraConfig);
                       cameraAccessory.configureCameraSource(cameraSource);
 
                       // Setup the Motion Sensors for this camera
