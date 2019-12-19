@@ -44,7 +44,8 @@ On your homebridge system, edit config.json to add a platform block like this:
       "apiPort": 7443,
       "apiProtocol": "https",
       "apiKey": "<api key from NVR user settings>",
-      "motionSensors": true
+      "motionSensors": true,
+      "audio": true
     }
   ]
 }

@@ -174,7 +174,8 @@ ffmpegUfvPlatform.prototype.accessories = function(callback) {
                         "maxStreams": 2,
                         "maxWidth": discoveredChannel.width, // or however we end up getting to this!
                         "maxHeight": discoveredChannel.height,
-                        "maxFPS": discoveredChannel.fps
+                        "maxFPS": discoveredChannel.fps,
+                        "audio": nvrConfig.audio === true
                       };
 
                       debug('Config: ' + JSON.stringify(videoConfig));
